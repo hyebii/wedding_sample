@@ -8,10 +8,14 @@
 		<meta name="keywords" content="Sample1" />
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
-		<script type="text/javascript" src="../assets/js/jquery-3.6.3.min.js"></script>
-		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="../assets/js/common.js"></script>
+		<!-- <meta property="og:title" content="청첩장 초대합니다" />
+		<meta property="og:description" content="소중한 자리에 초대합니다 💌" />
+		<meta property="og:image" content="https://your-domain.com/image.jpg" />
+		<meta property="og:url" content="https://your-domain.com" /> -->
+		<link rel="stylesheet" type="text/css" href="vercel.app/css/style.css" />
+		<script type="text/javascript" src="vercel.app/js/jquery-3.6.3.min.js"></script>
+		<script type="text/javascript" src="vercel.app/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="vercel.app/js/common.js"></script>
 		<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 		<script type="text/javascript">
 			// 복사하기 기능
@@ -37,9 +41,9 @@
 				Kakao.Share.sendDefault({
 					objectType: 'feed',
 					content: {
-						title: '청첩장',
-						description: '초대합니다',
-						imageUrl: 'https://example.com/image.jpg',
+						title: '청첩장 초대합니다',
+						description: '소중한 자리에 초대합니다 💌',
+						imageUrl: 'https://my-wedding.vercel.app/main.jpg',
 						link: {
 							mobileWebUrl: window.location.href,
 							webUrl: window.location.href,
@@ -159,7 +163,7 @@
 								<div class="rgt">
 									<div class="num">은행 1234-5678</div>
 									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
-										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+										<img src="vercel.app/images/icon/icon_copy.svg" alt="복사하기" />
 									</div>
 								</div>
 							</li>
@@ -171,7 +175,7 @@
 								<div class="rgt">
 									<div class="num">은행 1234-5678</div>
 									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
-										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+										<img src="vercel.app/images/icon/icon_copy.svg" alt="복사하기" />
 									</div>
 								</div>
 							</li>
@@ -183,7 +187,7 @@
 								<div class="rgt">
 									<div class="num">은행 1234-5678</div>
 									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
-										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+										<img src="vercel.app/images/icon/icon_copy.svg" alt="복사하기" />
 									</div>
 								</div>
 							</li>
@@ -195,7 +199,7 @@
 								<div class="rgt">
 									<div class="num">은행 1234-5678</div>
 									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
-										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+										<img src="vercel.app/images/icon/icon_copy.svg" alt="복사하기" />
 									</div>
 								</div>
 							</li>
@@ -207,7 +211,7 @@
 								<div class="rgt">
 									<div class="num">은행 1234-5678</div>
 									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
-										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+										<img src="vercel.app/images/icon/icon_copy.svg" alt="복사하기" />
 									</div>
 								</div>
 							</li>
@@ -219,7 +223,7 @@
 								<div class="rgt">
 									<div class="num">은행 1234-5678</div>
 									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
-										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+										<img src="vercel.app/images/icon/icon_copy.svg" alt="복사하기" />
 									</div>
 								</div>
 							</li>
