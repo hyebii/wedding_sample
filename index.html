@@ -1,131 +1,242 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-	<title>U+ 기업메시징 RCS guide</title>
-	<meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
-	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-		crossorigin="anonymous"></script>
-	<style type="text/css">
-		* {margin: 0;padding: 0;box-sizing: border-box}
-		ol,ul,li {margin: 0;padding: 0;list-style: none}
-		a {color: #555;text-decoration: none}
-		body {font-family: "Noto Sans KR", sans-serif, "맑은 고딕", Malgun Gothic, Doutm, Tahoma;-webkit-text-size-adjust: none;font-size: 12px;color: #333}
-		h1 {padding: 10px;border-bottom: 1px solid #ddd;font-size: 24px}
-		h2 {font-size: 20px}
-		h2 a {font-weight: normal;color: #5193ff;text-decoration: underline}
-		button {border: 0;background: none;height: auto;cursor: pointer}
-		#guide-header {z-index:500;position: sticky;top: 0;display: flex;align-items: center;width: 100%;height: 50px;padding: 0 30px;background: #e78753}
-		#guide-header .tit {flex-shrink: 0;font-size: 20px;color: #fff}
-		#guide-header .gnb {position: absolute;top: 0;left: 50%;transform: translateX(-50%);display: flex;align-items: center}
-		#guide-header .gnb li {font-size: 18px;color: #fff}
-		#guide-header .gnb li .btn-menu {display: block;height: 50px;line-height: 49px;padding: 0 20px;font-size: 16px;color: #fff;font-weight: 600}
-		#guide-header .gnb li.active .btn-menu,
-		#guide-header .gnb li:hover .btn-menu {background: #fff;color: #e07941}
-		#guide-header .btn-component{margin-left: 30px;font-size:18px;color:#fff;box-shadow:inset 0 -1px 0 #fff;}
-		#container {margin: 0 10px}
-		.main-tab {display: flex;align-items: center;width: 100%;margin-top: 20px;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
-		.main-tab .tab {padding: 10px 0;font-weight: bold;font-size: 20px;color: #8f959e;margin: 0 15px}
-		.main-tab .tab.act {color: #333;box-shadow: inset 0 -4px 0 0 #e07941}
-		.main-con {display: none}
-		.tab-con {display: none}
-		.tab-area {z-index:500;position: sticky;top: 50px;display: flex;align-items: center;width: 100%;border-bottom: 1px solid #ccc;background: #fff}
-		.tab-area .tab {padding: 10px 0;font-size: 18px;color: #8f959e;margin: 0 15px}
-		.tab-area .tab.act {color: #333;box-shadow: inset 0 -4px 0 0 #e07941}
-		table.file_lst {table-layout: fixed;border-collapse: collapse;width: 100%;margin: 10px 0;border-bottom: 1px solid #ccc}
-		table.file_lst tr.line {border-top: 2px solid #ccc}
-		table.file_lst thead th {padding: 7px 5px;background-color: #d9d9d9;border: 1px solid #ccc;border-bottom: double #ccc;white-space: nowrap}
-		table.file_lst tbody th {padding: 10px;border: 1px solid #ccc;color: #555;text-align: left}
-		table.file_lst tbody td {padding: 10px;border: 1px solid #ccc;color: #555}
-		table.file_lst td > a {display: inline-block;color: #e07941;letter-spacing: 0.5px;text-decoration: underline}
-		table.file_lst td .yet {display: inline-flex;flex-shrink: 0;width: 70px;height: 24px;line-height: 24px;border-radius: 15px;background: #eaeaea;color: #333}
-		table.file_lst td .yet::before {content: '작업전';width: 100%;text-align: center}
-		table.file_lst td .ing {display: inline-flex;flex-shrink: 0;width: 70px;height: 24px;line-height: 24px;border-radius: 15px;background: #5193ff;color: #fff}
-		table.file_lst td .ing::before {content: '작업중';width: 100%;text-align: center}
-		table.file_lst td .hold {display: inline-flex;flex-shrink: 0;width: 70px;height: 24px;line-height: 24px;border-radius: 15px;background: #b5b5b5;color: #fff}
-		table.file_lst td .hold::before {content: '작업 홀딩';width: 100%;text-align: center}
-		table.file_lst td .end {display: inline-flex;flex-shrink: 0;width: 70px;height: 24px;line-height: 24px;border-radius: 15px;background: #e07941;color: #fff}
-		table.file_lst td .end::before {content: '작업완료';width: 100%;text-align: center}
-		table.file_lst td .pop {position: relative;display: flex;align-items: center;margin: 5px 0;line-height: 1}
-		table.file_lst td .pop::before {content: 'P';width: 18px;height: 18px;line-height: 18px;margin-right: 5px;border-radius: 50%;border: 1px solid #e07941;background: #fff;font-size: 12px;color: #e07941;font-weight: 600;text-align: center}
-		table.file_lst td span {color: red}
-		table.file_lst .line {border-top: 2px solid #ccc}
-		table.file_lst .date {font-family: Tahoma;color: #999}
-		.ac {text-align: center}
-	</style>
-	<script>
-		$(function () {
+	<head>
+		<title>Sample1</title>
+		<meta charset="utf-8" />
+		<meta name="title" content="Sample1" />
+		<meta name="Description" content="Sample1" />
+		<meta name="keywords" content="Sample1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+		<script type="text/javascript" src="../assets/js/jquery-3.6.3.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/js/common.js"></script>
+		<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+		<script type="text/javascript">
+			// 복사하기 기능
+			function copyText(el) {
+				const text = el.dataset.copy
 
-			// 탭 클릭
-			$(".tab").each(function (i) {
-				$(this).on("click", function () {
-					$(".tab").removeClass("act");
-					$(this).addClass("act");
-					$(".tab-con").hide();
-					$(".tab-con").eq(i).show();
-				});
-			});
+				if (navigator.clipboard) {
+					navigator.clipboard.writeText(text)
+					alert('복사되었습니다')
+				} else {
+					const t = document.createElement('textarea')
+					t.value = text
+					document.body.appendChild(t)
+					t.select()
+					document.execCommand('copy')
+					t.remove()
+				}
+			}
 
-			$(".tab").eq(0).trigger("click");
-		});
-	</script>
-</head>
-<body>
-	<div id="guide-header">
-		<a href="index.html" class="tit">U+ 기업메시징 RCS guide</a>
-		<button type="button" class="btn-component" onclick="window.open('style-guide.html')">: style component</button>
-	</div>
-	<div id="container">
-		<div class="tab-area">
-			<button type="button" class="tab">가이드 리스트</button>
+			Kakao.init('3a2209579d02fee508b92647c9e13aba')
+
+			function shareKakao() {
+				Kakao.Share.sendDefault({
+					objectType: 'feed',
+					content: {
+						title: '청첩장',
+						description: '초대합니다',
+						imageUrl: 'https://example.com/image.jpg',
+						link: {
+							mobileWebUrl: window.location.href,
+							webUrl: window.location.href,
+						},
+					},
+				})
+			}
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #container -->
+			<div id="container">
+				<div class="content-wrap">
+					<div class="content main">
+						<div class="txt-set">
+							<p class="name">WOOBIN & MINA</p>
+							<p>2025년 12월 20일 토요일 | 서울 신라 호텔 영빈관</p>
+						</div>
+					</div>
+					<!-- greetings -->
+					<div class="content greetings">
+						<div class="greet">
+							저희 두 사람이 같은 방향을 바라보며 <br />함께 걸어가려 합니다. <br /><br />
+							저희의 시작에 따뜻한 발걸음으로 <br />함께해주시면 감사하겠습니다.
+						</div>
+						<ul class="name-list">
+							<li>아버지 · 어머니 성함<span>아들</span><strong>김우빈 </strong></li>
+							<li>아버지 · 어머니 성함<span>딸</span><strong>신민아</strong></li>
+						</ul>
+						<div class="place">2025년 12월 20일 | 토요일 | 00시 <br />서울 신라 호텔 영빈관</div>
+					</div>
+					<!-- gallery -->
+					<div class="content gallery"></div>
+					<!-- calendar -->
+					<div class="content calendar">
+						<div class="cal-tit">
+							<div class="date">12.20</div>
+							<div class="tit">Wedding Day</div>
+						</div>
+						<div class="cal">
+							<ul class="cal-top">
+								<li class="sun">S</li>
+								<li>M</li>
+								<li>T</li>
+								<li>W</li>
+								<li>T</li>
+								<li>F</li>
+								<li>S</li>
+							</ul>
+							<ul class="cal-con">
+								<li></li>
+								<li>1</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+								<li>6</li>
+								<li class="sun">7</li>
+								<li>8</li>
+								<li>9</li>
+								<li>10</li>
+								<li>11</li>
+								<li>12</li>
+								<li>13</li>
+								<li class="sun">14</li>
+								<li>15</li>
+								<li>16</li>
+								<li>17</li>
+								<li>18</li>
+								<li>19</li>
+								<li class="marry">20</li>
+								<li class="sun">21</li>
+								<li>22</li>
+								<li>23</li>
+								<li>24</li>
+								<li>25</li>
+								<li>26</li>
+								<li>27</li>
+								<li class="sun">28</li>
+								<li>29</li>
+								<li>30</li>
+								<li>31</li>
+							</ul>
+						</div>
+					</div>
+					<!-- location -->
+					<div class="content location">
+						<div class="tit">Location</div>
+						<div class="loc">서울 신라 호텔 영빈관 서울 중구 동호로 249</div>
+						<div class="map"></div>
+						<ul class="way-list">
+							<li>
+								<div class="traffic">지하철</div>
+								동대입구역 5번 출구 (약 도보 5분)
+							</li>
+							<li>
+								<div class="traffic">셔틀버스</div>
+								동대입구역 5번 출구 앞 수시 운행
+							</li>
+							<li>
+								<div class="traffic">자가용</div>
+								호텔 내 주차장 이용 및 발렛 파킹 가능
+							</li>
+						</ul>
+					</div>
+					<!-- mind -->
+					<div class="content mind">
+						<div class="tit">마음 전하실 곳</div>
+						<ul class="mind-list">
+							<li>
+								<div class="lft">
+									<div class="role">신랑</div>
+									<div class="name">김우빈</div>
+								</div>
+								<div class="rgt">
+									<div class="num">은행 1234-5678</div>
+									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
+										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lft">
+									<div class="role">아버지</div>
+									<div class="name">성함</div>
+								</div>
+								<div class="rgt">
+									<div class="num">은행 1234-5678</div>
+									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
+										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lft">
+									<div class="role">어머니</div>
+									<div class="name">성함</div>
+								</div>
+								<div class="rgt">
+									<div class="num">은행 1234-5678</div>
+									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
+										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+									</div>
+								</div>
+							</li>
+							<li class="bride">
+								<div class="lft">
+									<div class="role">신부</div>
+									<div class="name">신민아</div>
+								</div>
+								<div class="rgt">
+									<div class="num">은행 1234-5678</div>
+									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
+										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lft">
+									<div class="role">아버지</div>
+									<div class="name">성함</div>
+								</div>
+								<div class="rgt">
+									<div class="num">은행 1234-5678</div>
+									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
+										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="lft">
+									<div class="role">어머니</div>
+									<div class="name">성함</div>
+								</div>
+								<div class="rgt">
+									<div class="num">은행 1234-5678</div>
+									<div class="copy" onclick="copyText(this)" data-copy="은행 1234-5678">
+										<img src="../assets/images/icon/icon_copy.svg" alt="복사하기" />
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //#container -->
+			<!-- #footer -->
+			<div id="footer">
+				<div class="btn-area">
+					<a href="/" class="link-btn" onclick="copyText(this)" data-copy="사이트 링크">링크 복사하기</a>
+					<a href="/" class="link-btn" onclick="shareKakao()">카톡으로 공유하기</a>
+				</div>
+			</div>
+			<!-- //#footer -->
 		</div>
-		<div class="tab-con">
-			<table class="file_lst">
-				<colgroup>
-					<col width="10%" />
-					<col width="10%" />
-					<col width="10%" />
-					<col width="10%" />
-					<col width="20%" />
-					<col width="8%" />
-					<col width="8%" />
-					<col width="24%" />
-				</colgroup>
-				<thead>
-					<tr>
-						<th>1Depth</th>
-						<th>2Depth</th>
-						<th>3Depth</th>
-						<th>4Depth</th>
-						<th>URL</th>
-						<th>상태</th>
-						<th>수정</th>
-						<th>비고</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="line">
-						<th rowspan="7">템플릿</th>
-						<td>관리</td>
-						<td></td>
-						<td></td>
-						<td><a href="html/template_admin.html" target="_blank">/template_admin.html</a></td>
-						<td class="ac"><span class="end"></span></td>
-						<td class="ac"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>등록</td>
-						<td></td>
-						<td></td>
-						<td><a href="html/template_register.html" target="_blank">/template_register.html</a></td>
-						<td class="ac"><span class="end"></span></td>
-						<td class="ac"></td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-</body>
+		<!-- //#wrap -->
+	</body>
 </html>
