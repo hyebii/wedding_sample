@@ -1,0 +1,79 @@
+$fontUrl: '../fonts/';
+
+@font-face {
+	font-family: 'MaruBuri';
+	font-weight: 300;
+	font-style: normal;
+	src:
+		local('MaruBuri-Light'),
+		url('#{$fontUrl}MaruBuri-Light.woff2') format('woff2'),
+		url('#{$fontUrl}MaruBuri-Light.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'MaruBuri';
+	font-weight: 400;
+	font-style: normal;
+	src:
+		local('MaruBuri-Regular'),
+		url('#{$fontUrl}MaruBuri-Regular.woff2') format('woff2'),
+		url('#{$fontUrl}MaruBuri-Regular.woff') format('woff');
+	font-display: swap;
+}
+
+// @font-face {
+// 	font-family: 'MaruBuri';
+// 	font-weight: 500;
+// 	font-style: normal;
+// 	src:
+// 		local('MaruBuri-Medium'),
+// 		url('#{$fontUrl}MaruBuri-Medium.woff2') format('woff2'),
+// 		url('#{$fontUrl}MaruBuri-Medium.woff') format('woff');
+// 	font-display: swap;
+// }
+
+@font-face {
+	font-family: 'MaruBuri';
+	font-weight: 700;
+	font-style: normal;
+	src:
+		local('MaruBuri-Bold'),
+		url('#{$fontUrl}MaruBuri-Bold.woff2') format('woff2'),
+		url('#{$fontUrl}MaruBuri-Bold.woff') format('woff');
+	font-display: swap;
+}
+
+//********************//
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-style: normal;
+	src:
+		local('Pretendard-Light'),
+		url('#{$fontUrl}Pretendard-Light.woff2') format('woff2'),
+		url('#{$fontUrl}Pretendard-Light.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-style: normal;
+	src:
+		local('Pretendard-Regular'),
+		url('#{$fontUrl}Pretendard-Regular.woff2') format('woff2'),
+		url('#{$fontUrl}Pretendard-Regular.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-style: normal;
+	src:
+		local('Pretendard-Bold'),
+		url('#{$fontUrl}Pretendard-Bold.woff2') format('woff2'),
+		url('#{$fontUrl}Pretendard-Bold.woff') format('woff');
+	font-display: swap;
+}

@@ -1,0 +1,211 @@
+@use '../abstracts' as *;
+/*******************************************************************
+	Layout
+********************************************************************/
+#wrap {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	// background: ;
+}
+
+// #header {
+// }
+
+#container {
+	.content-wrap {
+		max-width: 680px;
+		margin: 0 auto;
+	}
+	.content {
+		padding: 120px 0;
+		text-align: center;
+		& > .tit {
+			margin-bottom: 80px;
+			@include font(18px, var(--black));
+		}
+
+		&.main {
+			width: 100%;
+			aspect-ratio: 680 / 1021;
+			padding: 100px 40px;
+			background: url('../images/bg/bg_main.jpg') no-repeat 0 0 / contain;
+			.txt-set {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				width: 100%;
+				gap: 6px;
+				& > p {
+					@include font(14px, var(--white), 1);
+					&.name {
+						@include font(26px, var(--white), 1, var(--fw-bold));
+					}
+				}
+			}
+		}
+		&.greetings {
+			.greet {
+				@include font(14px, var(--black), 1.6);
+			}
+			.name-list {
+				margin: 70px 0;
+				& > li {
+					@include font(16px, var(--black));
+					& > span {
+						display: inline-flex;
+						width: 30px;
+						margin: 0 20px;
+						@include font(14px, var(--black));
+						font-family: var(--font-sub) !important;
+					}
+					& > strong {
+						@include font(16px, var(--black), null, var(--fw-bold));
+						font-family: var(--font-sub) !important;
+					}
+					& + li {
+						margin-top: 10px;
+					}
+				}
+			}
+			.place {
+				@include font(14px, var(--black), 1.4);
+			}
+		}
+		&.gallery {
+		}
+		&.calendar {
+			.cal-tit {
+				.date {
+					@include font(26px, var(--black), null, var(--fw-bold));
+				}
+				.tit {
+					margin-top: 12px;
+					@include font(14px, var(--black), null, var(--fw-light));
+					font-family: var(--font-sub) !important;
+				}
+			}
+			.cal {
+				display: flex;
+				flex-direction: column;
+				gap: 40px;
+				margin-top: 50px;
+				&-top,
+				&-con {
+					display: grid;
+					grid-template-columns: repeat(7, 1fr);
+					gap: 40px;
+					& > li {
+						@include font(14px, var(--black), null, var(--fw-light));
+						font-family: var(--font-sub) !important;
+						&.sun {
+							color: var(--red);
+						}
+						&.marry {
+							position: relative;
+							font-weight: var(--fw-bold);
+							&::after {
+								content: '';
+								z-index: -1;
+								position: absolute;
+								background: url('../images/icon/icon_heart.svg') no-repeat 0 0 / contain;
+								@include center('both');
+								width: 30px;
+								height: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.location {
+			& > .tit {
+				margin-bottom: 40px;
+			}
+			.loc {
+				@include font(14px, var(--black), 1.4, var(--fw-light));
+				font-family: var(--font-sub) !important;
+			}
+			.map {
+				margin: 70px auto;
+			}
+			.way-list {
+				& > li {
+					display: flex;
+					@include font(14px, var(--black), 1.6, var(--fw-light));
+					font-family: var(--font-sub) !important;
+					& > .traffic {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						width: 96px;
+						&::after {
+							content: '';
+							width: 1px;
+							height: 14px;
+							margin: 0 20px;
+							background: var(--black);
+						}
+					}
+					& + li {
+						margin-top: 14px;
+					}
+				}
+			}
+		}
+		&.mind {
+			padding: 120px 60px;
+			.mind-list {
+				& > li {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					width: 100%;
+					text-align: left;
+					& > .lft {
+						display: flex;
+						align-items: center;
+						.role {
+							width: 100px;
+						}
+						.name {
+							width: 100px;
+						}
+					}
+					& > .rgt {
+						display: flex;
+						align-items: center;
+						.num {
+							width: 150px;
+						}
+						.copy {
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	.btn-area {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 60px;
+		padding: 10px;
+		background: var(--bg-fb);
+		.link-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			@include font(16px, var(--black));
+			& + .link-btn {
+				border-left: 1px solid var(--black);
+			}
+		}
+	}
+}

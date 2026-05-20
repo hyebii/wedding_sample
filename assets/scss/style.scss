@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+// abstracts
+@use 'abstracts' as *;
+
+// base
+@forward './base/reset';
+@forward './base/font';
+@forward './base/preset';
+
+// component
+@forward './components/popup';
+
+// layout
+@forward './pages/layout';

@@ -1,0 +1,113 @@
+@use '../abstracts' as *;
+
+// 마진 / 패딩 설정
+@for $i from 0 through 5 {
+	.mt#{$i*10} {
+		margin-top: #{$i * 10}px !important;
+	}
+	.mb#{$i*10} {
+		margin-bottom: #{$i * 10}px !important;
+	}
+	.pt#{$i*10} {
+		padding-top: #{$i * 10}px !important;
+	}
+	.pb#{$i*10} {
+		padding-bottom: #{$i * 10}px !important;
+	}
+}
+
+// 마진 0
+.mgn {
+	margin: 0 !important;
+}
+// 마진 top 0
+.mtn {
+	margin-top: 0 !important;
+}
+// 패딩 0
+.pdn {
+	padding: 0 !important;
+}
+// 패딩 top 0
+.ptn {
+	padding-top: 0 !important;
+}
+
+// border
+.bdn {
+	border: none !important;
+}
+.bdtn {
+	border-top: none !important;
+}
+.bdbn {
+	border-bottom: none !important;
+}
+
+.w50 {
+	width: 50% !important;
+}
+
+.scrollbar {
+	&::-webkit-scrollbar {
+		display: flex;
+		width: 5px;
+		height: 56px;
+	}
+	&::-webkit-scrollbar-track {
+		// background-color: transparent;
+		background-color: var(--primary-dark);
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--bg-7f);
+		border-radius: 10px;
+	}
+	&-white {
+		&::-webkit-scrollbar {
+			display: flex;
+			width: 5px;
+			height: 5px;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+			border-radius: 6px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--scrollbar-white);
+			border-radius: 4px;
+		}
+	}
+}
+
+.flex-col {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	&.gap20 {
+		gap: 20px;
+	}
+	&.gap30 {
+		gap: 30px;
+	}
+	&.gap40 {
+		gap: 40px;
+	}
+}
+
+// .MuiChartsTooltip-cell {
+//   font-size: 12px !important;
+// }
+// .mui-1n5ni72-MuiChartsTooltip-table .MuiChartsTooltip-markContainer {
+//   width: 20px !important;
+// }
+// .MuiChartsLabelMark-circle {
+//   width: 10px !important;
+//   height: 10px !important;
+// }
