@@ -42,11 +42,11 @@
 					const container = document.getElementById('map')
 
 					const map = new kakao.maps.Map(container, {
-						center: new kakao.maps.LatLng(37.556, 127.006),
+						center: new kakao.maps.LatLng(37.5561, 127.0063),
 						level: 3,
 					})
 
-					const position = new kakao.maps.LatLng(37.556, 127.006)
+					const position = new kakao.maps.LatLng(37.5561, 1127.0063)
 					const marker = new kakao.maps.Marker({
 						position: position,
 					})
@@ -57,7 +57,7 @@
 					// })
 
 					kakao.maps.event.addListener(marker, 'click', function () {
-						window.open('https://map.kakao.com/link/map/신라호텔 영빈관,37.556, 127.006', '_blank')
+						window.open('https://map.kakao.com/link/map/신라호텔 영빈관,37.5561, 127.0063', '_blank')
 					})
 				})
 			})
