@@ -17,7 +17,11 @@
 		<script type="text/javascript" src="/assets/js/jquery-3.6.3.min.js"></script>
 		<!-- <script type="text/javascript" src="/assets/js/common.js"></script> -->
 		<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-		<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3a2209579d02fee508b92647c9e13aba&autoload=false"></script>
+		<!-- <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3a2209579d02fee508b92647c9e13aba&autoload=false"></script> -->
+		<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+		<script charset="UTF-8">
+			new daum.roughmap.Lander({ timestamp: '1782112287530', key: 'pxvpes2ph8t', mapWidth: '640', mapHeight: '360' }).render()
+		</script>
 		<script type="text/javascript">
 			Kakao.init('3a2209579d02fee508b92647c9e13aba')
 
@@ -38,28 +42,24 @@
 				})
 
 				// 지도
-				kakao.maps.load(function () {
-					const container = document.getElementById('map')
+				// kakao.maps.load(function () {
+				// 	const container = document.getElementById('map')
 
-					const map = new kakao.maps.Map(container, {
-						center: new kakao.maps.LatLng(37.5665, 126.978),
-						level: 3,
-					})
+				// 	const map = new kakao.maps.Map(container, {
+				// 		center: new kakao.maps.LatLng(1782112287530),
+				// 		level: 3,
+				// 	})
 
-					const position = new kakao.maps.LatLng(37.5665, 126.978)
-					const marker = new kakao.maps.Marker({
-						position: position,
-					})
-					marker.setMap(map)
+				// 	const position = new kakao.maps.LatLng(1782112287530)
+				// 	const marker = new kakao.maps.Marker({
+				// 		position: position,
+				// 	})
+				// 	marker.setMap(map)
 
-					document.getElementById('map-btn').addEventListener('click', function () {
-						window.open('https://map.kakao.com/link/map/서울시청,37.5665,126.978', '_blank')
-					})
-
-					kakao.maps.event.addListener(marker, 'click', function () {
-						window.open('https://map.kakao.com/link/map/서울시청,37.5665,126.978', '_blank')
-					})
-				})
+				// 	document.getElementById('map-btn').addEventListener('click', function () {
+				// 		window.open('https://map.kakao.com/link/map/서울시청,37.5665,126.978', '_blank')
+				// 	})
+				// })
 			})
 
 			// 복사하기 기능
@@ -210,7 +210,8 @@
 					<div class="content location">
 						<div class="tit">Location</div>
 						<div class="loc">서울 신라 호텔 영빈관 서울 중구 동호로 249</div>
-						<div class="map" id="map"></div>
+						<div id="daumRoughmapContainer1782112287530" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+						<!-- <div class="map" id="map"></div> -->
 						<a class="map-btn" id="map-btn">카카오맵으로 보기</a>
 						<ul class="way-list">
 							<li>
