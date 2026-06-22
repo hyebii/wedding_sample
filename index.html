@@ -19,67 +19,78 @@
 		<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 		<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3a2209579d02fee508b92647c9e13aba&autoload=false"></script>
 		<script type="text/javascript">
-			Kakao.init('3a2209579d02fee508b92647c9e13aba')
+				Kakao.init('3a2209579d02fee508b92647c9e13aba')
 
-			document.addEventListener('DOMContentLoaded', () => {
-				// 갤러리 클릭시 모달 띄우기
-				const modal = document.getElementById('modal')
-				const modalImg = document.getElementById('modalImg')
+				document.addEventListener('DOMContentLoaded', () => {
+					// 갤러리 클릭시 모달 띄우기
+					const modal = document.getElementById('modal')
+					const modalImg = document.getElementById('modalImg')
 
-				document.querySelectorAll('.thumb').forEach((img) => {
-					img.addEventListener('click', () => {
-						modalImg.src = img.src
-						modal.style.display = 'block'
+					document.querySelectorAll('.thumb').forEach((img) => {
+						img.addEventListener('click', () => {
+							modalImg.src = img.src
+							modal.style.display = 'block'
+						})
 					})
-				})
 
-				modal.addEventListener('click', () => {
-					modal.style.display = 'none'
-				})
-
-				// 지도
-				kakao.maps.load(function () {
-					const container = document.getElementById('map')
-
-					const map = new kakao.maps.Map(container, {
-						center: new kakao.maps.LatLng(37.5665, 126.978),
-						level: 3,
+					modal.addEventListener('click', () => {
+						modal.style.display = 'none'
 					})
+
+					// 지도
+					kakao.maps.load(function () {
+						const container = document.getElementById('map')
+
+						const map = new kakao.maps.Map(container, {
+							center: new kakao.maps.LatLng(37.5665, 126.978),
+							level: 3,
+						})
+
+						const position = new kakao.maps.LatLng(37.5665, 126.978)
+						const marker = new kakao.maps.Marker({
+							position: position,
+						})
+						marker.setMap(map)
+					})
+					kakao.maps.event.addListener(marker, 'click', function () {
+			window.open(
+			  'https://map.kakao.com/link/map/서울시청,37.5665,126.978',
+			  '_blank'
+			)
 				})
-			})
 
-			// 복사하기 기능
-			function copyText(el) {
-				const text = el.dataset.copy
+				// 복사하기 기능
+				function copyText(el) {
+					const text = el.dataset.copy
 
-				if (navigator.clipboard) {
-					navigator.clipboard.writeText(text)
-					alert('복사되었습니다')
-				} else {
-					const t = document.createElement('textarea')
-					t.value = text
-					document.body.appendChild(t)
-					t.select()
-					document.execCommand('copy')
-					t.remove()
+					if (navigator.clipboard) {
+						navigator.clipboard.writeText(text)
+						alert('복사되었습니다')
+					} else {
+						const t = document.createElement('textarea')
+						t.value = text
+						document.body.appendChild(t)
+						t.select()
+						document.execCommand('copy')
+						t.remove()
+					}
 				}
-			}
 
-			// 카카오톡 공유하기
-			function shareKakao() {
-				Kakao.Share.sendDefault({
-					objectType: 'feed',
-					content: {
-						title: 'WOOBIN & MINA 청첩장',
-						description: '소중한 자리에 초대합니다 💌',
-						imageUrl: 'https://wedding-sample-dusky.vercel.app/assets/images/og_main.jpg',
-						link: {
-							mobileWebUrl: 'https://wedding-sample-dusky.vercel.app/?v=3',
-							webUrl: 'https://wedding-sample-dusky.vercel.app?v=3',
+				// 카카오톡 공유하기
+				function shareKakao() {
+					Kakao.Share.sendDefault({
+						objectType: 'feed',
+						content: {
+							title: 'WOOBIN & MINA 청첩장',
+							description: '소중한 자리에 초대합니다 💌',
+							imageUrl: 'https://wedding-sample-dusky.vercel.app/assets/images/og_main.jpg',
+							link: {
+								mobileWebUrl: 'https://wedding-sample-dusky.vercel.app/?v=3',
+								webUrl: 'https://wedding-sample-dusky.vercel.app?v=3',
+							},
 						},
-					},
-				})
-			}
+					})
+				}
 		</script>
 	</head>
 	<body>
