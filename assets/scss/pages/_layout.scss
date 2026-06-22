@@ -162,6 +162,16 @@
 				height: 350px;
 				margin: 70px auto;
 			}
+			.map-btn {
+				cursor: pointer;
+				display: flex;
+				width: fit-content;
+				margin: 12px 0;
+				padding: 8px 16px;
+				background: var(--bg-fb);
+				@include font(14px, var(--black), 1.4, var(--fw-light));
+				font-family: var(--font-sub) !important;
+			}
 			.way-list {
 				& > li {
 					display: flex;

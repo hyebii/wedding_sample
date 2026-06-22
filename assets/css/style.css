@@ -699,6 +699,19 @@ button:focus {
   height: 350px;
   margin: 70px auto;
 }
+#container .content.location .map-btn {
+  cursor: pointer;
+  display: flex;
+  width: fit-content;
+  margin: 12px 0;
+  padding: 8px 16px;
+  background: var(--bg-fb);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: var(--fw-light);
+  color: var(--black);
+  font-family: var(--font-sub) !important;
+}
 #container .content.location .way-list > li {
   display: flex;
   font-size: 14px;
